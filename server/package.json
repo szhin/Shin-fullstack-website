@@ -1,0 +1,64 @@
+{
+    "name": "nodejs",
+    "version": "1.0.0",
+    "description": "Nodejs express project by cunconthichngu",
+    "main": "index.js",
+    "engines": {
+        "node": "14.x"
+    },
+    "scripts": {
+        "start": "nodemon --inspect index.js",
+        "watch": "sass --watch src/resources/scss/app.scss src/public/css/app.css",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/szhin/express-account.git"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "movies",
+        "mongodb",
+        "backend",
+        "authentication"
+    ],
+    "author": "cunconthichngu",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/szhin/express-account/issues"
+    },
+    "homepage": "https://github.com/szhin/express-account#readme",
+    "dependencies": {
+        "axios": "^1.4.0",
+        "bcrypt": "^5.1.0",
+        "body-parser": "^1.20.2",
+        "compression": "^1.7.4",
+        "connect-flash": "^0.1.1",
+        "connect-mongo": "^5.0.0",
+        "cookie-parser": "^1.4.6",
+        "cookie-session": "^2.0.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "express-async-errors": "^3.1.1",
+        "express-handlebars": "^7.0.7",
+        "express-session": "^1.17.3",
+        "file": "^0.2.2",
+        "helmet": "^6.1.5",
+        "https": "^1.0.0",
+        "jsonwebtoken": "^9.0.0",
+        "mongodb": "^5.3.0",
+        "mongoose": "^7.1.0",
+        "mongoose-slug-updater": "^3.3.0",
+        "multer": "^1.4.5-lts.1",
+        "path": "^0.12.7",
+        "rand-token": "^1.0.1"
+    },
+    "devDependencies": {
+        "@types/cookie-parser": "^1.4.3",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.22",
+        "sass": "^1.62.1"
+    }
+}
