@@ -1,0 +1,175 @@
+<div class="mt-5">
+    <form method="POST" action="/register" class="needs-validation mt-4" {{! enctype='multipart/form-data' }}>
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col">
+                    <div class="card card-registration">
+                        <div class="row g-0">
+                            <div class="col-xl-6 d-none d-xl-block" style=" padding: 0 !important;">
+                                <img src="/images/img-register-page.jpeg" alt="Sample photo" class="img-fluid"
+                                    style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card-body text-black">
+                                    <h3 class="mb-5 mt-4 text-uppercase text-lg-center text-md-center text-sm-center">
+                                        Create an account</h3>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4"
+                                            style="padding-left: 10px !important;padding-right: 10px !important;">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="firstName">First name</label>
+                                                <input type="text" id="firstName" name="firstName"
+                                                    class="form-control form-control-lg"
+                                                    style="font-size: 16px; !important" required />
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4"
+                                            style="padding-left: 10px !important;padding-right: 10px !important;">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="lastName">Last name</label>
+                                                <input type="text" id="lastName" name="lastName"
+                                                    class="form-control form-control-lg"
+                                                    style="font-size: 16px; !important" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-outline mb-4"
+                                        style="padding-left: 10px !important;padding-right: 10px !important;">
+                                        <label class="form-label" for="email">Your email<span
+                                                class="error">{{error}}</span></label>
+                                        <input type="email" id="email" name="email" class="form-control form-control-lg"
+                                            style="font-size: 16px; !important"
+                                            pattern="^[a-zA-Z0-9._%+-]+@(gmail|yahoo|hotmail)\.com$" required
+                                            oninput="removeSpaces(this)" />
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4"
+                                            style="padding-left: 10px !important;padding-right: 10px !important;">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="password">Password</label>
+                                                <input type="password" id="password" name="password"
+                                                    class="form-control form-control-lg"
+                                                    style="font-size: 16px; !important" required
+                                                    oninput="removeSpaces(this)" />
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4"
+                                            style="padding-left: 10px !important;padding-right: 10px !important;">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="repeatPassword">Repeat
+                                                    password<span class="error">{{errorPassword}}</span></label>
+                                                <input type="password" id="repeatPassword" name="repeatPassword"
+                                                    class="form-control form-control-lg"
+                                                    style="font-size: 16px; !important" required
+                                                    oninput="removeSpaces(this)" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4"
+                                            style="padding-left: 10px !important;padding-right: 10px !important;">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="phone">Phone number</label>
+                                                <input type="phone" id="phone" name="phone"
+                                                    class="form-control form-control-lg"
+                                                    style="font-size: 16px; !important" required
+                                                    oninput="formatPhoneNumber(this)" />
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4"
+                                            style="padding-left: 10px !important;padding-right: 10px !important;">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="username">Username<span
+                                                        class="error">{{error}}</span></label>
+                                                <input type="text" id="username" name="username"
+                                                    class="form-control form-control-lg"
+                                                    style="font-size: 16px; !important" required
+                                                    oninput="removeSpaces(this)" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2"
+                                        style="padding-left: 10px !important;padding-right: 10px !important;">
+                                        <h6 class="mb-0 me-4" style="padding-right: 10px !important;">Gender:</h6>
+
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" name="gender" id="female"
+                                                required value="female" />
+                                            <label class="form-check-label" for="female">Female</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" name="gender" id="male"
+                                                required value="male" />
+                                            <label class="form-check-label" for="male">Male</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mb-0">
+                                            <input class="form-check-input" type="radio" name="gender" id="other"
+                                                required value="other" />
+                                            <label class="form-check-label" for="other">Other</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4"
+                                            style="!important;padding-left: 10px !important;padding-right: 10px !important;">
+
+                                            <select name="country" class="select"
+                                                style="height: 40px; padding-left:10px !important;" required>
+                                                <option value="" disabled selected>- Select country -</option>
+                                                {{#each countries}}
+                                                <option value="{{this.name}}">{{this.name}}</option>
+                                                {{/each}}{{#each countries}}
+                                                <option value="{{this.name}}">{{this.name}}</option>
+                                                {{/each}}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="redirect-page"
+                                        style='padding-left: 10px !important;padding-right: 10px !important;'>
+                                        Already have an account?
+                                        <a href="/renderLogin">
+                                            Sign in
+                                        </a>
+                                    </div>
+                                    <div class="d-flex justify-content-end pt-3">
+
+                                        <button type="submit" class="btn btn-lg ms-2"
+                                            style="color: black;background-color: rgb(215, 0, 30)">Register
+                                            account</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function removeSpaces(input) {
+        input.value = input.value.replace(/\s/g, '');
+    }
+
+    function validateNumber(input) {
+        input.value = input.value.replace(/\D/g, '');
+    }
+
+    function formatPhoneNumber(input) {
+        var value = input.value;
+        value = value.replace(/\s/g, ''); // Loại bỏ khoảng trắng
+        value = value.replace(/\D/g, ''); // Loại bỏ ký tự không phải số
+
+        input.value = value;
+    }
+</script>
