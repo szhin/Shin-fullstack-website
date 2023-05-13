@@ -137,9 +137,9 @@ Welcome to the README file for Shin Movie Web, a movie streaming web application
     MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<database>?retryWrites=true&w=majority
   ```
   
-  Replace <username>, <password>, <cluster-url>, and <database> with your MongoDB Atlas credentials and database information.
+  Replace `<username>`, `<password>`, `<cluster-url>`, and `<database>` with your MongoDB Atlas credentials and database information.
   
-  You can watch the video tutorial here: 
+  You can watch the video tutorial here: [Link video here!!](https://www.youtube.com/watch?v=Nmv2-oSQyWE)
   
   ## Deployment
   
