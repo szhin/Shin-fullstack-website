@@ -144,7 +144,6 @@ Welcome to the README file for Shin Movie Web, a movie streaming web application
   ## Deployment
   
   Shin Movie Web is deployed using Vercel, a cloud platform for static sites and serverless functions. To deploy the web application to Vercel, follow these steps:
-  https://vercel.com/docs
  
   You can read the docs on how to use Vercel here: [https://vercel.com/docs](https://vercel.com/docs)  
   
