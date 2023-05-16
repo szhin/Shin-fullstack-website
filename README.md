@@ -2,6 +2,9 @@
 
 Welcome to the README file for Shin Movie Web, a movie streaming web application created by Pham Cao Bang. This web application has been developed using a combination of front-end and back-end technologies. The front-end is built using React.js, while the back-end is powered by Node.js with the Express framework. The database is hosted on MongoDB Atlas, and the web application is deployed using Vercel on vercel.com.
 
+Here is the deployed Front-end site: [https://szhin.vercel.app](https://szhin.vercel.app)
+Here is the deployed Back-end site: [https://szhinbe.vercel.app](https://szhinbe.vercel.app)
+
 ## Table of Contents
 
   - [Front-end](#front-end)
